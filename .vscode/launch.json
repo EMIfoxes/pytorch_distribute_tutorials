@@ -1,0 +1,37 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {"name": "Python 调试程序: 当前文件",
+            
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {"name": "Python accelerate",
+        
+        "type": "debugpy",
+        "request": "launch",
+        "module": "accelerate.commands.launch",          //调试accelerate launch
+        "args": [
+            "tutorials/deepspeed_accelerate/accelerate_basics_scripts.py"
+            // "--multi_gpu", 
+            // "--mixed_precision",      "no",
+            // "--machine_rank",         "0", 
+            // "--main_process_ip",      "222.201.144.234", 
+            // "--main_process_port",    "7234", 
+            // "--num_machines",         "1", 
+            // "--num_processes",        "1", 
+            // "./diff_prompter/ppo_prompter.py", 
+            // "--data",                 "./data_path", 
+            // "--gpt_path",             "./supervised_finetuned_gpt_path", 
+            // "--trl_config",           "./diff_prompter/configs/ppo_config_a100_coco_bsz256_kl0.2.yml", 
+            // "--checkpoint_dir",       "./ckpt_dir",
+        ],                                                           //需要输入的参数
+        "console": "integratedTerminal"
+    }
+    ]
+}
